@@ -7,16 +7,16 @@ class Colout < Formula
 
   if OS.mac?
     url "https://github.com/kemokemo/colout/releases/download/v0.1.0/colout_darwin_x86_64.tar.gz"
-    sha256 "0ecf30620b844865f4ccf924a32cd9d7001d5cc0b27b0f7900b3cf980b9371e0"
+    sha256 "64c65257fe2222f31468e088c5eba622f8bfd37b9bfb0bacbdebafa2c9dba4c2"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/kemokemo/colout/releases/download/v0.1.0/colout_linux_x86_64.tar.gz"
-      sha256 "d77d78614b4e08a0b749f399a32a845ced45734325440d8e9d7dad4ee75aaffb"
+      sha256 "0af5bdcd67647d1c016cf3fe277924eccb47ae3adfdc236436f801dd3ac8bb13"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kemokemo/colout/releases/download/v0.1.0/colout_linux_arm64.tar.gz"
-        sha256 "b7428c5898b2ba9df32b486075bab0bfd7e9400ed83892dc0f75753769cb2ff6"
+        sha256 "c1969c39d63e1692d46df18e090a76dc7f3945e8db09442940a4ace7cc9ce714"
       else
       end
     end
