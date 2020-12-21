@@ -2,20 +2,20 @@
 class Gomrepo < Formula
   desc "This small tool adds license information to the 'go module' information and outputs it in various formats."
   homepage "https://github.com/kemokemo/gomrepo"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kemokemo/gomrepo/releases/download/v0.1.0/gomrepo_Darwin_x86_64.tar.gz"
-    sha256 "4626462b90388532293d80061c4a5c1b670d4a0cff0d11e64ef0bccdb81b54a2"
+    url "https://github.com/kemokemo/gomrepo/releases/download/v0.1.1/gomrepo_Darwin_x86_64.tar.gz"
+    sha256 "ae320f9be2b67214bc59df7d739193a96e5504c0c7b0833ced32137dfd8cbba3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kemokemo/gomrepo/releases/download/v0.1.0/gomrepo_Linux_x86_64.tar.gz"
-    sha256 "9640829cb1593540b36c5b5595bd121ff38be2001a146dfea2e3a1ebc325ec46"
+    url "https://github.com/kemokemo/gomrepo/releases/download/v0.1.1/gomrepo_Linux_x86_64.tar.gz"
+    sha256 "9953088df4d110afbf62e941b7f53fdc18e6dec4b3cef07ae4bceb1c9c38e238"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kemokemo/gomrepo/releases/download/v0.1.0/gomrepo_Linux_arm64.tar.gz"
-    sha256 "b4d9a1a8a43271dfc9bb792d7def0dcd06878b55dd656f0cd304537a0923144b"
+    url "https://github.com/kemokemo/gomrepo/releases/download/v0.1.1/gomrepo_Linux_arm64.tar.gz"
+    sha256 "91eccf3c211521c8a892598ddae8b3953fb47b1a83eac92d3cb98bf1a4d12990"
   end
 
   def install
