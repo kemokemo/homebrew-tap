@@ -3,7 +3,6 @@ class Colout < Formula
   desc "It's a simple and tiny tool for getting colored output in scripts."
   homepage "https://github.com/kemokemo/colout"
   version "0.1.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/kemokemo/colout/releases/download/v0.1.1/colout_Darwin_x86_64.tar.gz"

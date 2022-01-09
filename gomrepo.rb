@@ -3,7 +3,6 @@ class Gomrepo < Formula
   desc "This small tool adds license information to the 'go module' information and outputs it in various formats."
   homepage "https://github.com/kemokemo/gomrepo"
   version "0.1.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/kemokemo/gomrepo/releases/download/v0.1.1/gomrepo_Darwin_x86_64.tar.gz"

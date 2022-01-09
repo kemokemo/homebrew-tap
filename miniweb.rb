@@ -6,7 +6,6 @@ class Miniweb < Formula
   desc "Tiny web service to serve files."
   homepage "https://github.com/kemokemo/miniweb"
   version "0.0.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
