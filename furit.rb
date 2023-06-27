@@ -5,20 +5,20 @@
 class Furit < Formula
   desc "This tool finds unreferenced images from text files such as markdown."
   homepage "https://github.com/kemokemo/furit"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.2/furit_Darwin_x86_64.tar.gz"
-      sha256 "f7c5670ed39b351dc32bd3c0f0279e222a3d98ffa995c32e6e1add4357d3de0d"
+    if Hardware::CPU.arm?
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Darwin_arm64.tar.gz"
+      sha256 "45d5b44364aa6b0cfe8f6cdb33cad2c8e9b48e05a4f148c54ef650dea769e3f0"
 
       def install
         bin.install "furit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.2/furit_Darwin_arm64.tar.gz"
-      sha256 "893bbd07d8620c04300459d84d79b5be07a443d7233c1a731e8352bee2cdcca8"
+    if Hardware::CPU.intel?
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Darwin_x86_64.tar.gz"
+      sha256 "299a261aea4e404381e4d3fceac6882a28681f52f7b35f86813838c58ae5567c"
 
       def install
         bin.install "furit"
@@ -28,16 +28,16 @@ class Furit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.2/furit_Linux_x86_64.tar.gz"
-      sha256 "d4ff4c13d61d9e9cdace93583ecabbb81d7f2b4558e25eb0c6a3619d3831dfc5"
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Linux_x86_64.tar.gz"
+      sha256 "2f9063cd2597f9e22906e3149c23f8d9ae37953015b9038630af9d8565f0046a"
 
       def install
         bin.install "furit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.2/furit_Linux_arm64.tar.gz"
-      sha256 "ec2b7060cb61bf2801cbe848cb1d397c443897d064c44b7662e095e44349ced9"
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Linux_arm64.tar.gz"
+      sha256 "aac1f0e5b5375986ea9e9ab8895416510cc8862a87be282b48c554871a0d240b"
 
       def install
         bin.install "furit"
