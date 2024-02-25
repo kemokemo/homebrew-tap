@@ -5,31 +5,43 @@
 class Miniweb < Formula
   desc "Tiny web service to serve files."
   homepage "https://github.com/kemokemo/miniweb"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.1/miniweb_Darwin_x86_64.tar.gz"
-      sha256 "a8a3d60a7b831da3b863f1077b10d7e828bf39b62d5e58be836abcf89bc50272"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.1/miniweb_Darwin_arm64.tar.gz"
-      sha256 "305f91c6393daeab40e2d3ead7f77a7e36589c84b55444cf8e64a7362773da22"
+      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.2/miniweb_Darwin_arm64.tar.gz"
+      sha256 "79c2de249c70daa683f9ba51a84eace47d0939e6010e53c1212d6e31a93191f3"
+
+      def install
+        bin.install "miniweb"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.2/miniweb_Darwin_x86_64.tar.gz"
+      sha256 "3af2a934886275f34159d01618938ee02c1c3b9c46abe73f0e4623c0565f8af3"
+
+      def install
+        bin.install "miniweb"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.1/miniweb_Linux_x86_64.tar.gz"
-      sha256 "f4bac0059dd6bff7812b4db04023383bb1e48f76ce98d48872179793c823a227"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.1/miniweb_Linux_arm64.tar.gz"
-      sha256 "7f90ca9ec82d2000c61e23200aae05d01518443229457a7ecd1e824b347d3d6c"
-    end
-  end
+      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.2/miniweb_Linux_arm64.tar.gz"
+      sha256 "79dfb6340afde65668f1c10235cb116dcd27d338abd37b27e67240157ce61f78"
 
-  def install
-    bin.install "miniweb"
+      def install
+        bin.install "miniweb"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/kemokemo/miniweb/releases/download/v0.0.2/miniweb_Linux_x86_64.tar.gz"
+      sha256 "e862d1915fe6e8511112c3f1bbe6abd76584da5b0e2e061e71357cc0d72e74a5"
+
+      def install
+        bin.install "miniweb"
+      end
+    end
   end
 end
