@@ -5,20 +5,20 @@
 class Furit < Formula
   desc "This tool finds unreferenced images from text files such as markdown."
   homepage "https://github.com/kemokemo/furit"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Darwin_arm64.tar.gz"
-      sha256 "45d5b44364aa6b0cfe8f6cdb33cad2c8e9b48e05a4f148c54ef650dea769e3f0"
+    if Hardware::CPU.intel?
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.4/furit_Darwin_x86_64.tar.gz"
+      sha256 "9218f999a9f8bd0caf66f962210cf54bca5bbf58a7a2a44171219f1fa920c290"
 
       def install
         bin.install "furit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Darwin_x86_64.tar.gz"
-      sha256 "299a261aea4e404381e4d3fceac6882a28681f52f7b35f86813838c58ae5567c"
+    if Hardware::CPU.arm?
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.4/furit_Darwin_arm64.tar.gz"
+      sha256 "f5e6feca77a5c0aee13b925128559b55378dfb638fb7290ecccf9a85af7a5d6e"
 
       def install
         bin.install "furit"
@@ -27,18 +27,16 @@ class Furit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Linux_x86_64.tar.gz"
-      sha256 "2f9063cd2597f9e22906e3149c23f8d9ae37953015b9038630af9d8565f0046a"
-
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.4/furit_Linux_x86_64.tar.gz"
+      sha256 "9cffab5b73015d7f623fc2af4c53d9ccb72847e50941640eb249cca12cc5dba8"
       def install
         bin.install "furit"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kemokemo/furit/releases/download/v0.2.3/furit_Linux_arm64.tar.gz"
-      sha256 "aac1f0e5b5375986ea9e9ab8895416510cc8862a87be282b48c554871a0d240b"
-
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kemokemo/furit/releases/download/v0.2.4/furit_Linux_arm64.tar.gz"
+      sha256 "70b88798b2231cbc4dcdba8966e0ac8fa4d165e5fd1ba56ff6f709538886a485"
       def install
         bin.install "furit"
       end
